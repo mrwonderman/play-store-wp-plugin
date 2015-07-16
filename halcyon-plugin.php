@@ -30,8 +30,8 @@ public function widget( $args, $instance ) {
     echo $args['before_title'] . $title . $args['after_title'];
   }
 
-  echo '<div style="margin: 0px;margin-left: -20px;padding: 0px;">';
-  echo '<ul style="list-style-type: none;width: 300px;">';
+  echo '<div style="margin: 0px -20px 0px -20px;padding: 0px;">';
+  echo '<ul style="list-style-type: none;">';
 
   foreach ($pkgnames as $value) {
     $obj = json_decode(file_get_contents("http://halcyon.ch/icon_service/index.php?pkg=" . $value));
@@ -39,8 +39,8 @@ public function widget( $args, $instance ) {
     echo '<a href="https://play.google.com/store/apps/details?id='.$value.'" target="_blank">';
     echo '<li style ="padding: 10px;overflow: auto;">';
     echo '<img src="'.$obj->src.'" height="60" width="60" style="float: left;margin: 0 15px 0 0;" />';
-    echo '<h4 style="font: bold 14px/1.5 Helvetica, Verdana, sans-serif;">'.$obj->name.'</h4>';
     echo '<p style="font: 10px/1.5 Helvetica, Verdana, sans-serif;">'.$obj->package.'</p>';
+    echo '<h4 style="font: bold 15px/1.5 Helvetica, Verdana, sans-serif;">'.$obj->name.'</h4>';
     echo '</li>';
     echo '</a>';
   }
