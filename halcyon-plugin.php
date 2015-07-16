@@ -15,9 +15,9 @@ function __construct() {
 parent::__construct(
 'wpb_widget',
 
-__('WPBeginner Widget', 'wpb_widget_domain'),
+__('Play Store App List Widget', 'wpb_widget_domain'),
 
-array( 'description' => __( 'Sample widget based on WPBeginner Tutorial', 'wpb_widget_domain' ), )
+array( 'description' => __( 'Adds widget which contains a list of android apps. Each item contains links directly to the Play Store.', 'wpb_widget_domain' ), )
 );
 }
 
